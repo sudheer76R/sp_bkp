@@ -29,5 +29,13 @@ options {
                 sh 'echo "SSH passphrase is: $SSH_CRED"' 
             } 
         } 
-    } 
+        stage(InputExample) {
+                 input { 
+                        message "Should we continue?" 
+                        ok "Yes, we should." 
+                 }
+                steps {
+                    echo 'Executing after inputs are provided'
+                }
+        } 
 } 
