@@ -1,7 +1,7 @@
 pipeline { 
     agent any 
     environment {  
-        place=Bengaluru 
+        place='Bengaluru' 
     } 
     stages { 
         stage('Example') { 
