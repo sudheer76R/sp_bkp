@@ -3,11 +3,20 @@ pipeline {
     environment {  
         place='Bengaluru' 
     } 
+    parameters { 
+        string(name: 'USER_ID', defaultValue: 'Jenkins', description: 'enter your id?') 
+        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value') 
+        choice(name: 'env', choices: ['One', 'Two', 'Three'], description: 'Pick something') 
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password') 
+    } 
     stages { 
         stage('Example') { 
             steps { 
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}" 
                 echo "Living in ${place}"
+                echo "Sting param value: ${USER_ID}"
+                echo "Boolean value: $TOGGLE"
+                echo "Choice param value: ${env}"
             } 
         } 
     } 
