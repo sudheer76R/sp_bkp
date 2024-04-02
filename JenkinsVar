@@ -4,13 +4,13 @@ options {
   timestamps()
 } 
     environment {  
-        place='Bengaluru' 
+        place='Bengaluru'
+        GITHUB_CRED=credentils('github_sp')
     } 
     parameters { 
         string(name: 'USER_ID', defaultValue: 'Jenkins', description: 'enter your id?') 
         booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value') 
         choice(name: 'env', choices: ['One', 'Two', 'Three'], description: 'Pick something') 
-        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password') 
     } 
     stages { 
         stage('Example') { 
@@ -20,6 +20,9 @@ options {
                 echo "Sting param value: ${params.USER_ID}"
                 echo "Boolean value: ${params.TOGGLE}"
                 echo "Choice param value: ${params.env}"
+                echo "Github cred: ${GITHUB_CRED}"
+                echo "Github user: ${GITHUB_CRED_USR}"
+                echo "Github Password: ${GITHUB_CRED_PSW}"
             } 
         } 
     } 
