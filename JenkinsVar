@@ -14,9 +14,9 @@ pipeline {
             steps { 
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}" 
                 echo "Living in ${place}"
-                echo "Sting param value: ${USER_ID}"
-                echo "Boolean value: $TOGGLE"
-                echo "Choice param value: ${env}"
+                echo "Sting param value: ${params.USER_ID}"
+                echo "Boolean value: ${params.TOGGLE}"
+                echo "Choice param value: ${params.env}"
             } 
         } 
     } 
