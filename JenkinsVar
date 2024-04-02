@@ -20,9 +20,9 @@ options {
                 echo "Sting param value: ${params.USER_ID}"
                 echo "Boolean value: ${params.TOGGLE}"
                 echo "Choice param value: ${params.env}"
-                echo "Github cred: ${GITHUB_CRED}"
-                echo "Github user: ${GITHUB_CRED_USR}"
-                echo "Github Password: ${GITHUB_CRED_PSW}"
+                sh 'echo "Github cred: ${GITHUB_CRED}"'
+                sh 'echo "Github user: ${GITHUB_CRED_USR}"'
+                sh 'echo "Github Password: ${GITHUB_CRED_PSW}"'
             } 
         } 
     } 
