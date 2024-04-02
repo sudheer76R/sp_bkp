@@ -25,8 +25,8 @@ options {
                 sh 'echo "Github user: ${GITHUB_CRED_USR}"'
                 sh 'echo "Github Password: ${GITHUB_CRED_PSW}"'
                 sh 'echo "SSH private key is located at: $SSH_CRED"' 
-                sh 'echo "SSH user is: $SSH_CREDS_USR"' 
-                sh 'echo "SSH passphrase is: $SSH_CREDS_PSW"' 
+                sh 'echo "SSH user is: $SSH_CRED"' 
+                sh 'echo "SSH passphrase is: $SSH_CRED"' 
             } 
         } 
     } 
