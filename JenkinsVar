@@ -1,9 +1,13 @@
 pipeline { 
     agent any 
+    environment {  
+        place=Bengaluru 
+    } 
     stages { 
         stage('Example') { 
             steps { 
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}" 
+                echo "Living in ${place}"
             } 
         } 
     } 
