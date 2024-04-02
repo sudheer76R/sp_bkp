@@ -6,6 +6,7 @@ options {
     environment {  
         place='Bengaluru'
         GITHUB_CRED=credentials('github_sp')
+        SSH_CRED=credentials('java_node')
     } 
     parameters { 
         string(name: 'USER_ID', defaultValue: 'Jenkins', description: 'enter your id?') 
@@ -23,6 +24,9 @@ options {
                 sh 'echo "Github cred: ${GITHUB_CRED}"'
                 sh 'echo "Github user: ${GITHUB_CRED_USR}"'
                 sh 'echo "Github Password: ${GITHUB_CRED_PSW}"'
+                sh 'echo "SSH private key is located at: $SSH_CRED"' 
+                sh 'echo "SSH user is: $SSH_CREDS_USR"' 
+                sh 'echo "SSH passphrase is: $SSH_CREDS_PSW"' 
             } 
         } 
     } 
