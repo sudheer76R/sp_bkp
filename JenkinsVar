@@ -1,8 +1,8 @@
 pipeline { 
     agent any 
-    options { 
-        retry(3) 
-    } 
+options {
+  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '2')
+} 
     environment {  
         place='Bengaluru' 
     } 
