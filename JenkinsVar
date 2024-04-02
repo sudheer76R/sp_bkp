@@ -1,7 +1,7 @@
 pipeline { 
     agent any 
 options {
-  timestamps
+  timestamps()
 } 
     environment {  
         place='Bengaluru' 
